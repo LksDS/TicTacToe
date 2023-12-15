@@ -1,24 +1,24 @@
 public class Player {
-    private final char marcador;
-    private int vitorias;
-    private final String nome;
-    public Player(String nome, char marcador){
-        setVitorias(0);
-        this.nome = nome;
-        this.marcador = marcador;
+    private final char marker;
+    private int wins;
+    private final String name;
+    public Player(String name, char marker){
+        setWins(0);
+        this.name = name;
+        this.marker = marker;
     }
     String getNome(){
-        return this.nome;
+        return this.name;
     }
 
-    public char getMarcador() {
-        return marcador;
+    public char getMarker() {
+        return marker;
     }
 
-    public void setVitorias(int vitorias){
-        this.vitorias = vitorias;
+    public void setWins(int wins){
+        this.wins = wins;
     }
-    public int getVitorias(){
-        return this.vitorias;
+    public int getWins(){
+        return this.wins;
     }
 }

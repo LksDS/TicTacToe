@@ -40,7 +40,7 @@ public class Table {
     }
 
     public boolean isVictory(Player player) {
-        char marker = player.getMarcador();
+        char marker = player.getMarker();
         return verifyColumns(marker)|| verifyRows(marker)|| verifyDiagonals(marker);
     }
 

@@ -12,12 +12,12 @@ public class Turn {
     }
 
     public void jogarAVez(){
-        System.out.printf("Vez de %s (%s)\n", player.getNome(), player.getMarcador());
+        System.out.printf("Vez de %s (%s)\n", player.getNome(), player.getMarker());
         boolean isSeted = false;
         while (!isSeted){
             table.printTable();
             receberValores();
-            table.setMarker(indexsquare, player.getMarcador());
+            table.setMarker(indexsquare, player.getMarker());
             if(table.isSeted()){
                 isSeted = true;
             }else {
@@ -34,11 +34,11 @@ public class Turn {
         int x = 0, y = 0;
         while (!isValidIndex(x,y)){
             System.out.println("Insira uma posição válida (entre 1 e 3)");
-            System.out.println("Insira a posição x em que você deseja colocar seu " + player.getMarcador());
+            System.out.println("Insira a posição x em que você deseja colocar seu " + player.getMarker());
             String xvalue = Main.scan.nextLine();
             if(Main.isNumber(xvalue))
                 x = Integer.parseInt(xvalue);
-            System.out.println("Insira a posição y em que você deseja colocar seu " + player.getMarcador()+"\n");
+            System.out.println("Insira a posição y em que você deseja colocar seu " + player.getMarker()+"\n");
             String yvalue = Main.scan.nextLine();
             if(Main.isNumber(yvalue)){
                 y = Integer.parseInt(yvalue);

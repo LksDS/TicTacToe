@@ -26,7 +26,7 @@ public class Game {
             if(table.isVictory(playerOfTheTurn())){
                 table.printTable();
                 System.out.printf("%s Ganhou o jogo\n", playerOfTheTurn().getNome());
-                playerOfTheTurn().setVitorias(playerOfTheTurn().getVitorias()+1);
+                playerOfTheTurn().setWins(playerOfTheTurn().getWins()+1);
                 isEnded = true;
             }else if(turns == 8) {
                 table.printTable();
@@ -35,7 +35,7 @@ public class Game {
             }
             turns +=1;
         }
-        System.out.printf("Vitórias: %s %d X %s %d\n", players[0].getNome(), players[0].getVitorias(), players[1].getNome(), players[1].getVitorias());
+        System.out.printf("Vitórias: %s %d X %s %d\n", players[0].getNome(), players[0].getWins(), players[1].getNome(), players[1].getWins());
         this.askRematch();
     }
 
